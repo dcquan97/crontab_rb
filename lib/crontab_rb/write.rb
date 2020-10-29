@@ -12,7 +12,7 @@ module CrontabRb
           job_template: "/bin/bash -l -c ':job'",
           template: "cd :path && :bundle_command :runner_command -e :environment ':task' :output",
           environment_variable: 'RAILS_ENV',
-          environment: 'production',
+          environment: :stage,
           path: Dir.pwd,
           chronic_options: {},
           runner_command: "bin/rails runner",
